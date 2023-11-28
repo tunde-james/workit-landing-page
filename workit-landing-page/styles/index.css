@@ -26,7 +26,6 @@ a {
 }
 
 .header {
-  background-image: url('');
   background-color: var(--dark-purple);
   color: var(--color-white);
   height: 481px;
@@ -94,6 +93,13 @@ a {
   padding-inline: 24px;
 }
 
+.hero .btn-primary:hover,
+.hero .btn-primary:active {
+  background-color: transparent;
+  color: var(--light-green);
+  border: 1px solid var(--light-green);
+}
+
 .hero .hero-image {
   width: 292px;
   height: 168px;
@@ -102,8 +108,8 @@ a {
 
 .main {
   background-color: var(--ghost-white);
-  padding-block-start: 69px;
-  overflow: visible;
+  padding-block: 69px;
+  border-radius: 50% 50% 50% 50% / 0% 0% 3% 3%;
 }
 
 .workit-benefits {
@@ -117,7 +123,17 @@ a {
   margin-block-start: 69px;
 }
 
-.workit-benefitItem:before {
+.workit-benefitItem {
+  counter-increment: item;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,16 +146,6 @@ a {
   margin-block-end: 24px;
 }
 
-.workit-benefitItem {
-  counter-increment: item;
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .benefit-title {
   font-family: var(--font-fraunces);
   font-size: 1.75rem;
@@ -149,8 +155,7 @@ a {
   margin-block-end: 16px;
 }
 
-.workit-benefitItem p {
-  width: 343px;
+.benefit-description {
   text-align: center;
   font-family: var(--font-manrope);
   font-size: 1rem;
@@ -158,9 +163,105 @@ a {
   line-height: 28px;
 }
 
+.test-workit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block-start: 100px;
+}
+
+.workit-founder {
+  width: 281px;
+  height: 281px;
+}
+
 @media (min-width: 768px) {
-  .hero-image {
+  .header {
+    height: 540px;
+    border-radius: 10% 10% 50% 50% / 0% 0% 8% 8%;
+  }
+
+  .container {
+    padding-inline: 39px;
+  }
+
+  .hero .hero-image {
+    width: 479px;
+    height: 286px;
+  }
+
+  .hero .hero-caption {
+    max-width: 573px;
+    font-size: 3.75rem;
+    line-height: 60px;
+    margin-block-start: 56px;
+  }
+
+  .workit-benefits {
+    margin-block-start: 109px;
+  }
+
+  .workit-benefitItem {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .benefit-info {
+    max-width: 493px;
+    text-align: left;
+  }
+
+  .benefit-description {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 730px;
+    border-radius: 10% 10% 50% 50% / 0% 0% 8% 8%;
+  }
+
+  .navbar .btn-secondary {
+    font-size: 1.125rem;
+  }
+
+  .hero .hero-caption {
+    max-width: 635px;
+    font-size: 5rem;
+    line-height: 80px;
+    margin-block-start: 58px;
+  }
+
+  .hero .btn-primary {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+    padding-block: 16px;
+    padding-inline: 32px;
+  }
+
+  .hero .hero-image {
     width: 715px;
-    height: 427px;
+    height: 472px;
+  }
+
+  .workit-benefits {
+    flex-direction: row;
+    gap: 26px;
+    margin-block-start: 69px;
+  }
+
+  .workit-benefitItem {
+    flex-direction: column;
+  }
+
+  .benefit-info {
+    max-width: 354px;
+    text-align: center;
+  }
+
+  .benefit-description {
+    text-align: center;
   }
 }
