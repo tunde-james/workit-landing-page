@@ -303,7 +303,7 @@ a {
 
   .test-workit {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     /* position: relative; */
   }
 
@@ -324,6 +324,16 @@ a {
   .header {
     height: 730px;
     border-radius: 10% 10% 50% 50% / 0% 0% 8% 8%;
+  }
+
+  .pattern-1 {
+    left: -180px;
+    top: 120px;
+  }
+
+  .pattern-2 {
+    right: -80px;
+    top: 300px;
   }
 
   .navbar .btn-secondary {
