@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/tunde-james/workit-landing-page)
-- Live Site URL: [](https://workit-landing-page-mu.vercel.app/)
+- Live Site URL: [Live URL](https://workit-landing-page-mu.vercel.app/)
 
 ## My process
 
