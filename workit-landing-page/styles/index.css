@@ -315,6 +315,7 @@ a {
   }
 
   .founder-intro {
+    max-width: 514px;
     top: 190px;
     right: 103px;
     align-items: flex-start;
@@ -399,6 +400,7 @@ a {
   }
 
   .founder-intro {
+    max-width: 730px;
     top: 143px;
     right: 55px;
   }
